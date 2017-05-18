@@ -57,4 +57,3 @@ cconsole.log(resources.format('complex', 'hello', 5));
 ## License
 
 MIT.
-
