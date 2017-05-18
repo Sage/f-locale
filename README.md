@@ -39,7 +39,7 @@ The JSON files contain a simple object hash:
 
 `f-locale` uses [handlebars](http://handlebarsjs.com/) formatting directives.
 
-Basic usage is:
+Basic usage:
 
 ``` js
 import { locale } from 'f-locale';
