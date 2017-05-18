@@ -1,43 +1,43 @@
 {
-  "name": "f-locale",
-  "version": "1.0.1",
-  "license": "MIT",
-  "description": "Localization helper for f-promise",
-  "author": {
-    "name": "Bruno Jouhier",
-    "email": "bruno.jouhier@sage.com"
-  },
-  "main": "build/index.js",
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "dependencies": {
-    "f-promise": "^1.2.3",
-    "handlebars": "^4.0.8",
-    "streamline-runtime": "^1.1.2"
-  },
-  "devDependencies": {
-    "@types/chai": "^3.4.34",
-    "@types/handlebars": "^4.0.32",
-    "@types/mocha": "^2.2.33",
-    "@types/node": "^6.0.51",
-    "chai": "^3.5.0",
-    "copyfiles": "^1.2.0",
-    "mocha": "^3.2.0",
-    "typescript": "^2.0.10"
-  },
-  "keywords": [
-    "fibers",
-    "localization",
-    "i18n"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Sage/f-locale.git"
-  },
-  "scripts": {
-    "copyfiles": "copyfiles test/**/*.json build",
-    "prepublish": "rm -r build; npm run copyfiles; node_modules/typescript/bin/tsc",
-    "test": "node_modules/mocha/bin/mocha build/test"
-  }
+    "name": "f-locale",
+    "version": "1.0.1",
+    "license": "MIT",
+    "description": "Localization helper for f-promise",
+    "author": {
+        "name": "Bruno Jouhier",
+        "email": "bruno.jouhier@sage.com"
+    },
+    "main": "build/index.js",
+    "engines": {
+        "node": ">=6.0.0"
+    },
+    "dependencies": {
+        "f-promise": "^1.2.3",
+        "handlebars": "^4.0.8",
+        "streamline-runtime": "^1.1.2"
+    },
+    "devDependencies": {
+        "@types/chai": "^3.4.34",
+        "@types/handlebars": "^4.0.32",
+        "@types/mocha": "^2.2.33",
+        "@types/node": "^6.0.51",
+        "chai": "^3.5.0",
+        "copyfiles": "^1.2.0",
+        "mocha": "^3.2.0",
+        "typescript": "^2.0.10"
+    },
+    "keywords": [
+        "fibers",
+        "localization",
+        "i18n"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Sage/f-locale.git"
+    },
+    "scripts": {
+        "copyfiles": "copyfiles test/**/*.json build",
+        "prepublish": "rm -r build; npm run copyfiles; node_modules/typescript/bin/tsc",
+        "test": "node_modules/mocha/bin/mocha build/test"
+    }
 }
