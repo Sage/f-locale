@@ -1,0 +1,4 @@
+{
+    "simple": "this is simple",
+    "complex": "first: {{0}}, second: {{1}}"
+}
