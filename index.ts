@@ -1,1 +1,1 @@
-export { locale } from './src';
+export * from './src';
