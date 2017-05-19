@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import { locale } from '../src';
 
-const resources = locale.resources(module);
+const resources = locale.resources(__filename);
 
 describe("basic test", () => {
     it('can set and get current locale', () => {

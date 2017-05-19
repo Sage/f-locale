@@ -48,8 +48,8 @@ export class Locale {
 		return locale === 'ar' || locale === 'iw';
 	}
 
-	resources(mod: NodeModule) {
-		return new Resources(mod);
+	resources(from: string) {
+		return new Resources(from);
 	}
 }
 
@@ -57,30 +57,32 @@ export const locale = new Locale();
 
 export class Resources {
 	private static CACHE = {} as Dict<CacheEntry>;
-	private _module: NodeModule;
+	private _from: string;
 
-	constructor(mod: NodeModule) {
-		this._module = mod;
+	constructor(from: string) {
+		debugger;
+		this._from = from;
 	}
 
 	private _data(loc?: string) {
 		loc = loc || locale.current;
-		var key = this._module.filename + '-' + loc,
+		var key = this._from + '-' + loc,
 			r = Resources.CACHE[key];
 		if (!r) r = Resources.CACHE[key] = this._loadResources(loc);
 		return r;
 
 	}
 
-	/// * `resources = locale.resources(mod, l)`
+	/// * `resources = locale.resources(l)`
 	///   Returns a loader function for localized resources.
 	///   Resource `foo` is loaded with `resources().foo`
 	///   Warning: Returns a function. Do not forget the parentheses!
 	private _loadResources(l: string) {
 		const result = {} as Dict<string>;
 		const _loadFile = (l: string) => {
-			const dir = fsp.join(fsp.dirname(this._module.filename), 'resources');
-			const base = fsp.basename(this._module.filename, '.js');
+			debugger;
+			const dir = fsp.join(fsp.dirname(this._from), 'resources');
+			const base = fsp.basename(this._from, '.js');
 			if (!fs.existsSync(dir)) return result || {};
 			let p = fsp.join(dir, base + '-' + l + '.json');
 			var exists = fs.existsSync(p);
