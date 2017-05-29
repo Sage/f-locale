@@ -60,7 +60,6 @@ export class Resources {
 	private _from: string;
 
 	constructor(from: string) {
-		debugger;
 		this._from = from;
 	}
 
@@ -80,7 +79,6 @@ export class Resources {
 	private _loadResources(l: string) {
 		const result = {} as Dict<string>;
 		const _loadFile = (l: string) => {
-			debugger;
 			const dir = fsp.join(fsp.dirname(this._from), 'resources');
 			const base = fsp.basename(this._from, '.js');
 			if (!fs.existsSync(dir)) return result || {};

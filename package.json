@@ -14,11 +14,11 @@
   "dependencies": {
     "f-promise": "^1.2.3",
     "handlebars": "^4.0.8",
-    "@types/handlebars": "^4.0.32",
     "streamline-runtime": "^1.1.2"
   },
   "devDependencies": {
     "@types/chai": "^3.4.34",
+    "@types/handlebars": "^4.0.32",
     "@types/mocha": "^2.2.33",
     "@types/node": "^6.0.51",
     "chai": "^3.5.0",
