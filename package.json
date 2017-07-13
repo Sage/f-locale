@@ -1,6 +1,6 @@
 {
   "name": "f-locale",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "description": "Localization helper for f-promise",
   "author": {
@@ -39,6 +39,7 @@
   "scripts": {
     "copyfiles": "copyfiles test/**/*.json build",
     "prepublish": "rm -r build; npm run copyfiles; node_modules/typescript/bin/tsc",
-    "test": "node_modules/mocha/bin/mocha build/test"
+    "test": "node_modules/mocha/bin/mocha build/test",
+    "lint": "tslint -e 'node_modules/**' -p ."
   }
 }
