@@ -38,8 +38,8 @@
   },
   "scripts": {
     "copyfiles": "copyfiles test/**/*.json build",
-    "prepublish": "rm -r build; npm run copyfiles; node_modules/typescript/bin/tsc",
-    "test": "node_modules/mocha/bin/mocha build/test",
+    "prepare": "rm -r build; npm run copyfiles; tsc",
+    "test": "mocha build/test",
     "lint": "tslint -e 'node_modules/**' -p ."
   }
 }
