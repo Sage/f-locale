@@ -10,12 +10,11 @@
     "main": "build/index.js",
     "typings": "build/index.d.ts",
     "engines": {
-        "node": ">=6.0.0"
+        "node": ">=8.0.0"
     },
     "dependencies": {
-        "f-promise": "^1.2.3",
-        "handlebars": "^4.0.8",
-        "streamline-runtime": "^1.1.2"
+        "f-promise": "^2.0.3",
+        "handlebars": "^4.1.2"
     },
     "devDependencies": {
         "@types/chai": "^3.4.34",
@@ -24,8 +23,8 @@
         "@types/node": "^6.0.51",
         "chai": "^3.5.0",
         "copyfiles": "^1.2.0",
-        "mocha": "^3.2.0",
-        "typescript": "^2.0.10"
+        "mocha": "^6.1.4",
+        "typescript": "^3.5.2"
     },
     "keywords": [
         "fibers",
