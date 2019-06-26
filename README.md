@@ -2,12 +2,12 @@
 
 Localization helper for f-promise
 
-`f-locale` is a companion package for [`f-promise`](https://github.com/Sage/f-promise). 
+`f-locale` is a companion package for [`f-promise`](https://github.com/Sage/f-promise).
 It provides a small helper to manage localized messages.
 
 ## Installation
 
-``` sh
+```sh
 npm install --save f-locale
 ```
 
@@ -15,7 +15,7 @@ npm install --save f-locale
 
 Resources must be placed in JSON files inside a `resources` subdirectory of the current directory:
 
-``` sh
+```sh
 source-folder/
     resources/
         module1-en.json
@@ -30,7 +30,7 @@ source-folder/
 
 The JSON files contain a simple object hash:
 
-``` json
+```json
 {
     "simple": "a simple message",
     "complex": "a more complex message with {{0}} and {{1}} args"
@@ -41,7 +41,7 @@ The JSON files contain a simple object hash:
 
 Basic usage:
 
-``` js
+```js
 import { locale } from 'f-locale';
 const resources = locale.resources(module);
 
@@ -52,7 +52,6 @@ console.log(resources.message('simple'));
 // formating a parameterized message
 cconsole.log(resources.format('complex', 'hello', 5));
 ```
-
 
 ## License
 
